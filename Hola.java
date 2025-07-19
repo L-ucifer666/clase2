@@ -1,5 +1,20 @@
+import java.util.Stack;
+
 public class Hola {
     public static void main(String[] args) {
-        System.out.println("Hola mundo oo ");
+        Stack<String> historialPantallas = new Stack<>();
+
+        // Simulación de navegación en la aplicación
+        historialPantallas.push("Inicio");
+        historialPantallas.push("Lista de jóvenes");
+        historialPantallas.push("Detalles de Kaleb");
+        historialPantallas.push("Configuración de campamento");
+
+        System.out.println("Pantalla actual: " + historialPantallas.peek());
+
+        // Usuario regresa a la pantalla anterior
+        historialPantallas.pop();
+        System.out.println("Regresó a: " + historialPantallas.peek());
     }
+
 }
